@@ -27,8 +27,6 @@ public class KebabScript extends LoopingScript {
         this.loopDelay = 590;
         subscribe(ServerTickedEvent.class, serverTickedEvent -> {
             theBrain();
-
-
         });
         return super.initialize();
     }
