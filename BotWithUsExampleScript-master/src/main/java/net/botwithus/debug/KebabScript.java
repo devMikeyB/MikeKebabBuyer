@@ -130,15 +130,16 @@ public class KebabScript extends LoopingScript {
         }
 
     private void bankItems(){
-        Bank.open();
+        //Bank.open();
+        Bank.loadLastPreset();
         try{
-            AwaitCondition.await(() -> Bank.isOpen(), 12, TimeUnit.SECONDS);
+            AwaitCondition.await(() -> Backpack.isEmpty(), 12, TimeUnit.SECONDS);
         } catch(Exception e){
             printlnn("Something happened: " + e.getMessage());
         }
-        if (Bank.isOpen()){
-            Bank.depositAll();
-        }
+        //if (Bank.isOpen()){
+        //    Bank.depositAll();
+        //}
 
     }
 

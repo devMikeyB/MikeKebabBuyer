@@ -73,9 +73,10 @@ public class DebugGraphicsContext extends ScriptGraphicsContext {
 
     private void drawInstructionsTab() {
         ImGui.Text("Instructions:");
-        ImGui.Text("1) Al-Kharid near Karim.");
-        ImGui.Text("2) Have coin.");
-        ImGui.Text("3) Profit!");
+        ImGui.Text("1) Be sure to load a bank preset with an empty inventory before beginning.");
+        ImGui.Text("2) Al-Kharid near Karim.");
+        ImGui.Text("3) Have coin.");
+        ImGui.Text("4) Get Kebab!");
     }
 
     private void drawConsoleLogTab() {
