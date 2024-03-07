@@ -24,7 +24,7 @@ public class KebabScript extends LoopingScript {
     @Override
     public boolean initialize() {
         this.sgc = new DebugGraphicsContext(getConsole(), this);
-        this.loopDelay = 590;
+        this.loopDelay = 700;
         subscribe(ServerTickedEvent.class, serverTickedEvent -> {
             theBrain();
         });

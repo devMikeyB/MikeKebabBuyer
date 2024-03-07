@@ -19,14 +19,14 @@ public class AwaitCondition {
                 if (System.currentTimeMillis() - startTime < delay && condition.get()) {
                     throw new RuntimeException("Condition met");
                 }
-            }, 0, 590, TimeUnit.MILLISECONDS);
+            }, 0, 700, TimeUnit.MILLISECONDS);
 
             executor.schedule(() -> {
                 future.cancel(true);
             }, timeout, unit);
 
             while (!future.isDone()) {
-                Thread.sleep(590);
+                Thread.sleep(700); //Busy wait
             }
         } catch (RuntimeException e) {
             if (!e.getMessage().equals("Condition met")) {
